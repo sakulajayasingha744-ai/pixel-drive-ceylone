@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Drive Ceylon - Premium Digital Strategy & Rebranding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #13124C 0%, #1a1a5c 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #F9EB10 0%, #02CE97 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: #F9EB10;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(249, 235, 16, 0.3); }
+            to { box-shadow: 0 0 30px rgba(249, 235, 16, 0.6); }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .scale-in {
+            animation: scaleIn 0.6s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            70% { transform: scale(0.9); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .rotate-in {
+            animation: rotateIn 0.8s ease-out;
+        }
+        
+        @keyframes rotateIn {
+            from { transform: rotate(-180deg) scale(0.5); opacity: 0; }
+            to { transform: rotate(0deg) scale(1); opacity: 1; }
+        }
+        
+        .stagger-animation {
+            animation: staggerFade 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes staggerFade {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .glow-pulse {
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(249, 235, 16, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(249, 235, 16, 0.6), 0 0 60px rgba(249, 235, 16, 0.3); }
+        }
+        
+        .slide-up-stagger {
+            animation: slideUpStagger 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes slideUpStagger {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="mr-3">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#13124C"/>
+                            <text x="20" y="28" text-anchor="middle" fill="#F9EB10" font-family="Poppins, sans-serif" font-size="18" font-weight="700">PD</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold" style="color: #13124C;">Pixel Drive Ceylon</div>
+                        <div class="text-xs text-gray-500 -mt-1">Premium Digital Strategy</div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="nav-link active" onclick="showSection('home')" style="color: #13124C;">Home</a>
+                        <a href="#" class="nav-link" onclick="showSection('services')" style="color: #13124C;">Services</a>
+                        <a href="#" class="nav-link" onclick="showSection('portfolio')" style="color: #13124C;">Portfolio</a>
+                        <a href="#" class="nav-link" onclick="showSection('about')" style="color: #13124C;">About</a>
+                        <a href="#" class="nav-link" onclick="showSection('contact')" style="color: #13124C;">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="p-2 rounded-md" style="color: #13124C;">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="mobile-menu md:hidden fixed top-16 left-0 w-full h-screen bg-white z-40">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 text-lg font-medium" onclick="showSection('home'); toggleMobileMenu()" style="color: #13124C;">Home</a>
+                <a href="#" class="block px-3 py-2 text-lg font-medium" onclick="showSection('services'); toggleMobileMenu()" style="color: #13124C;">Services</a>
+                <a href="#" class="block px-3 py-2 text-lg font-medium" onclick="showSection('portfolio'); toggleMobileMenu()" style="color: #13124C;">Portfolio</a>
+                <a href="#" class="block px-3 py-2 text-lg font-medium" onclick="showSection('about'); toggleMobileMenu()" style="color: #13124C;">About</a>
+                <a href="#" class="block px-3 py-2 text-lg font-medium" onclick="showSection('contact'); toggleMobileMenu()" style="color: #13124C;">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <!-- Hero Section -->
+        <div class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0">
+                <div class="floating-animation absolute top-20 left-10 w-20 h-20 rounded-full opacity-20" style="background: #F9EB10;"></div>
+                <div class="floating-animation absolute top-40 right-20 w-16 h-16 rounded-full opacity-20" style="background: #02CE97; animation-delay: -2s;"></div>
+                <div class="floating-animation absolute bottom-40 left-1/4 w-12 h-12 rounded-full opacity-20" style="background: #6BF15C; animation-delay: -4s;"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="slide-in-left">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+                        Premium Digital
+                        <span class="text-gradient block">Transformation</span>
+                    </h1>
+                </div>
+                <div class="fade-in-up" style="animation-delay: 0.3s;">
+                    <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                        Elevating medium to large enterprises through innovative rebranding and comprehensive digital strategy solutions.
+                    </p>
+                </div>
+                <div class="fade-in-up" style="animation-delay: 0.6s;">
+                    <button onclick="showSection('contact')" class="pulse-glow px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105" style="background: #F9EB10; color: #13124C;">
+                        Start Your Transformation
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Preview -->
+        <div class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #13124C;">Why Choose Pixel Drive Ceylon?</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">We combine strategic thinking with creative excellence to deliver transformative digital experiences.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="hover-lift bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 rounded-full mb-6 flex items-center justify-center" style="background: #F9EB10;">
+                            <svg class="w-8 h-8" style="color: #13124C;" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4" style="color: #13124C;">Strategic Excellence</h3>
+                        <p class="text-gray-600">Data-driven strategies that align with your business objectives and market positioning.</p>
+                    </div>
+                    
+                    <div class="hover-lift bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 rounded-full mb-6 flex items-center justify-center" style="background: #02CE97;">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4" style="color: #13124C;">Creative Innovation</h3>
+                        <p class="text-gray-600">Cutting-edge design solutions that captivate audiences and drive engagement.</p>
+                    </div>
+                    
+                    <div class="hover-lift bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 rounded-full mb-6 flex items-center justify-center" style="background: #6BF15C;">
+                            <svg class="w-8 h-8" style="color: #13124C;" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4" style="color: #13124C;">Digital Mastery</h3>
+                        <p class="text-gray-600">Comprehensive digital solutions that scale with your business growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: #13124C;">Our Services</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive digital solutions tailored for enterprise-level transformation and growth.</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="hover-lift scale-in" style="animation-delay: 0.2s;">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl h-full glow-pulse">
+                            <div class="w-20 h-20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bounce-in" style="background: #F9EB10; animation-delay: 0.4s;">
+                                <svg viewBox="0 0 80 80" class="w-full h-full p-2">
+                                    <!-- Brand identity elements -->
+                                    <g transform="translate(40,40)">
+                                        <!-- Logo design mockup -->
+                                        <circle cx="0" cy="-15" r="12" fill="#13124C" opacity="0.9">
+                                            <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <text x="0" y="-10" text-anchor="middle" fill="#F9EB10" font-size="8" font-weight="bold">B</text>
+                                        <!-- Color palette -->
+                                        <rect x="-25" y="5" width="8" height="8" fill="#13124C" rx="2">
+                                            <animate attributeName="y" values="5;3;5" dur="2s" begin="0s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-15" y="5" width="8" height="8" fill="#F9EB10" rx="2">
+                                            <animate attributeName="y" values="5;3;5" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-5" y="5" width="8" height="8" fill="#02CE97" rx="2">
+                                            <animate attributeName="y" values="5;3;5" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="5" y="5" width="8" height="8" fill="#6BF15C" rx="2">
+                                            <animate attributeName="y" values="5;3;5" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="15" y="5" width="8" height="8" fill="#e5e7eb" rx="2">
+                                            <animate attributeName="y" values="5;3;5" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <!-- Typography lines -->
+                                        <rect x="-25" y="18" width="30" height="2" fill="#13124C" opacity="0.7" rx="1">
+                                            <animate attributeName="width" values="30;35;30" dur="4s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-25" y="22" width="20" height="2" fill="#13124C" opacity="0.5" rx="1">
+                                            <animate attributeName="width" values="20;25;20" dur="4s" begin="1s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-25" y="26" width="35" height="2" fill="#13124C" opacity="0.3" rx="1">
+                                            <animate attributeName="width" values="35;40;35" dur="4s" begin="2s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <!-- Design elements -->
+                                        <circle cx="-30" cy="-25" r="3" fill="#02CE97" opacity="0.6">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 -30 -25;360 -30 -25" dur="8s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="25" cy="-20" r="2" fill="#6BF15C" opacity="0.6">
+                                            <animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <path d="M20,-30 L30,-25 L25,-15 Z" fill="#F9EB10" opacity="0.7">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 25 -22;360 25 -22" dur="6s" repeatCount="indefinite"/>
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 slide-in-right" style="color: #13124C; animation-delay: 0.6s;">Brand Strategy & Identity</h3>
+                            <p class="text-gray-600 mb-6 fade-in-up" style="animation-delay: 0.8s;">Complete brand transformation including logo design, visual identity systems, and brand guidelines that resonate with your target market.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #02CE97;"></span>Logo & Visual Identity</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.1s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #02CE97;"></span>Brand Guidelines</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.2s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #02CE97;"></span>Market Positioning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="hover-lift scale-in" style="animation-delay: 0.4s;">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl h-full glow-pulse">
+                            <div class="w-20 h-20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden rotate-in" style="background: #02CE97; animation-delay: 0.6s;">
+                                <svg viewBox="0 0 80 80" class="w-full h-full p-2">
+                                    <!-- Digital strategy network -->
+                                    <g transform="translate(40,40)">
+                                        <!-- Central hub -->
+                                        <circle cx="0" cy="0" r="8" fill="white" opacity="0.9">
+                                            <animate attributeName="r" values="8;10;8" dur="4s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="0" cy="0" r="5" fill="#13124C">
+                                            <animate attributeName="r" values="5;6;5" dur="4s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <!-- Connected nodes -->
+                                        <circle cx="-20" cy="-15" r="4" fill="white" opacity="0.8">
+                                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="0s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="20" cy="-15" r="4" fill="white" opacity="0.8">
+                                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="-25" cy="10" r="4" fill="white" opacity="0.8">
+                                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="25" cy="10" r="4" fill="white" opacity="0.8">
+                                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="1.8s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="0" cy="20" r="4" fill="white" opacity="0.8">
+                                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <!-- Connection lines -->
+                                        <line x1="0" y1="0" x2="-20" y2="-15" stroke="white" stroke-width="2" opacity="0.6">
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="0" y1="0" x2="20" y2="-15" stroke="white" stroke-width="2" opacity="0.6">
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="0" y1="0" x2="-25" y2="10" stroke="white" stroke-width="2" opacity="0.6">
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="0" y1="0" x2="25" y2="10" stroke="white" stroke-width="2" opacity="0.6">
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="0" y1="0" x2="0" y2="20" stroke="white" stroke-width="2" opacity="0.6">
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+                                        </line>
+                                        <!-- Data flow indicators -->
+                                        <circle cx="-10" cy="-7" r="1" fill="#F9EB10">
+                                            <animate attributeName="r" values="1;3;1" dur="2s" repeatCount="indefinite"/>
+                                            <animateMotion dur="4s" repeatCount="indefinite" path="M-10,-7 Q0,0 10,7 Q0,0 -10,-7"/>
+                                        </circle>
+                                        <circle cx="10" cy="-7" r="1" fill="#6BF15C">
+                                            <animate attributeName="r" values="1;3;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                                            <animateMotion dur="4s" begin="0.5s" repeatCount="indefinite" path="M10,-7 Q0,0 -10,7 Q0,0 10,-7"/>
+                                        </circle>
+                                        <circle cx="0" cy="10" r="1" fill="#F9EB10">
+                                            <animate attributeName="r" values="1;3;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+                                            <animateMotion dur="4s" begin="1s" repeatCount="indefinite" path="M0,10 Q-15,0 0,-10 Q15,0 0,10"/>
+                                        </circle>
+                                        <!-- Tech icons -->
+                                        <rect x="-22" y="-17" width="4" height="4" fill="#13124C" opacity="0.7" rx="1">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 -20 -15;360 -20 -15" dur="10s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="18" y="-17" width="4" height="4" fill="#13124C" opacity="0.7" rx="1">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 20 -15;-360 20 -15" dur="8s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-27" y="8" width="4" height="4" fill="#13124C" opacity="0.7" rx="1">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 -25 10;360 -25 10" dur="12s" repeatCount="indefinite"/>
+                                        </rect>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 slide-in-left" style="color: #13124C; animation-delay: 0.8s;">Digital Strategy</h3>
+                            <p class="text-gray-600 mb-6 fade-in-up" style="animation-delay: 1s;">Comprehensive digital transformation strategies that align technology with business objectives for sustainable growth.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.2s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #6BF15C;"></span>Digital Transformation</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.3s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #6BF15C;"></span>Technology Consulting</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.4s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #6BF15C;"></span>Growth Strategy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="hover-lift scale-in" style="animation-delay: 0.6s;">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl h-full glow-pulse">
+                            <div class="w-20 h-20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bounce-in" style="background: #6BF15C; animation-delay: 0.8s;">
+                                <svg viewBox="0 0 80 80" class="w-full h-full p-2">
+                                    <!-- Web development scene -->
+                                    <g transform="translate(40,40)">
+                                        <!-- Browser window -->
+                                        <rect x="-25" y="-20" width="50" height="35" fill="#13124C" opacity="0.9" rx="3">
+                                            <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-23" y="-18" width="46" height="31" fill="white" rx="2"/>
+                                        <!-- Browser header -->
+                                        <rect x="-23" y="-18" width="46" height="6" fill="#f3f4f6" rx="2"/>
+                                        <circle cx="-18" cy="-15" r="1.5" fill="#ef4444">
+                                            <animate attributeName="fill" values="#ef4444;#fca5a5;#ef4444" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="-14" cy="-15" r="1.5" fill="#f59e0b">
+                                            <animate attributeName="fill" values="#f59e0b;#fcd34d;#f59e0b" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="-10" cy="-15" r="1.5" fill="#10b981">
+                                            <animate attributeName="fill" values="#10b981;#6ee7b7;#10b981" dur="3s" begin="1s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <!-- Website content -->
+                                        <rect x="-20" y="-10" width="40" height="3" fill="#6BF15C" rx="1">
+                                            <animate attributeName="width" values="40;45;40" dur="5s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-20" y="-5" width="25" height="2" fill="#e5e7eb" rx="1">
+                                            <animate attributeName="width" values="25;30;25" dur="4s" begin="1s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-20" y="-2" width="30" height="2" fill="#e5e7eb" rx="1">
+                                            <animate attributeName="width" values="30;35;30" dur="4s" begin="2s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-20" y="1" width="20" height="2" fill="#e5e7eb" rx="1">
+                                            <animate attributeName="width" values="20;25;20" dur="4s" begin="3s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <!-- Sidebar -->
+                                        <rect x="12" y="-10" width="8" height="15" fill="#f9fafb" rx="1">
+                                            <animate attributeName="opacity" values="1;0.7;1" dur="6s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="13" y="-9" width="6" height="1" fill="#d1d5db" rx="0.5">
+                                            <animate attributeName="width" values="6;4;6" dur="3s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="13" y="-7" width="4" height="1" fill="#d1d5db" rx="0.5">
+                                            <animate attributeName="width" values="4;6;4" dur="3s" begin="1s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="13" y="-5" width="5" height="1" fill="#d1d5db" rx="0.5">
+                                            <animate attributeName="width" values="5;3;5" dur="3s" begin="2s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <!-- Code elements -->
+                                        <text x="-15" y="8" fill="#13124C" font-size="3" opacity="0.7">&lt;/&gt;
+                                            <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+                                        </text>
+                                        <text x="-5" y="8" fill="#02CE97" font-size="3" opacity="0.7">{}
+                                            <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                                        </text>
+                                        <text x="5" y="8" fill="#F9EB10" font-size="3" opacity="0.7">CSS
+                                            <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+                                        </text>
+                                        <!-- Responsive indicators -->
+                                        <rect x="-30" y="18" width="12" height="8" fill="#13124C" opacity="0.6" rx="2">
+                                            <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="4s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="-28" y="20" width="8" height="4" fill="white" opacity="0.8" rx="1"/>
+                                        <rect x="18" y="20" width="8" height="5" fill="#13124C" opacity="0.6" rx="1">
+                                            <animateTransform attributeName="transform" type="scale" values="1;0.9;1" dur="4s" begin="2s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <rect x="19" y="21" width="6" height="3" fill="white" opacity="0.8" rx="0.5"/>
+                                        <!-- Loading dots -->
+                                        <circle cx="-5" cy="12" r="1" fill="#6BF15C" opacity="0.5">
+                                            <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="0" cy="12" r="1" fill="#6BF15C" opacity="0.5">
+                                            <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="5" cy="12" r="1" fill="#6BF15C" opacity="0.5">
+                                            <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+                                        </circle>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 slide-in-right" style="color: #13124C; animation-delay: 1s;">Web Development</h3>
+                            <p class="text-gray-600 mb-6 fade-in-up" style="animation-delay: 1.2s;">Modern, responsive websites and web applications built with cutting-edge technologies for optimal performance.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.4s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #F9EB10;"></span>Responsive Design</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.5s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #F9EB10;"></span>E-commerce Solutions</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.6s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #F9EB10;"></span>Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="hover-lift scale-in" style="animation-delay: 0.8s;">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl h-full glow-pulse">
+                            <div class="w-20 h-20 rounded-2xl mb-6 flex items-center justify-center overflow-hidden rotate-in" style="background: #13124C; animation-delay: 1s;">
+                                <svg viewBox="0 0 80 80" class="w-full h-full p-2">
+                                    <!-- Digital marketing ecosystem -->
+                                    <g transform="translate(40,40)">
+                                        <!-- Central megaphone -->
+                                        <path d="M-15,-8 L-5,-5 L-5,5 L-15,8 L-20,8 L-20,-8 Z" fill="#F9EB10">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 -12.5 0;5 -12.5 0;0 -12.5 0;-5 -12.5 0;0 -12.5 0" dur="4s" repeatCount="indefinite"/>
+                                        </path>
+                                        <path d="M-5,-5 L10,-3 L10,3 L-5,5 Z" fill="white" opacity="0.9"/>
+                                        <circle cx="12" cy="0" r="3" fill="white" opacity="0.8">
+                                            <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <!-- Sound waves -->
+                                        <path d="M15,-2 Q20,-4 20,0 Q20,4 15,2" stroke="#F9EB10" stroke-width="1.5" fill="none" opacity="0.7">
+                                            <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+                                        </path>
+                                        <path d="M18,-4 Q25,-6 25,0 Q25,6 18,4" stroke="#F9EB10" stroke-width="1.5" fill="none" opacity="0.5">
+                                            <animate attributeName="opacity" values="0.5;0.8;0.5" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+                                        </path>
+                                        <path d="M21,-6 Q30,-8 30,0 Q30,8 21,6" stroke="#F9EB10" stroke-width="1.5" fill="none" opacity="0.3">
+                                            <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+                                        </path>
+                                        <!-- Social media icons -->
+                                        <circle cx="-8" cy="-20" r="4" fill="#02CE97">
+                                            <animate attributeName="r" values="4;5;4" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <text x="-8" y="-17" text-anchor="middle" fill="white" font-size="4">f</text>
+                                        <rect x="5" y="-24" width="8" height="8" fill="#6BF15C" rx="2">
+                                            <animateTransform attributeName="transform" type="rotate" values="0 9 -20;360 9 -20" dur="8s" repeatCount="indefinite"/>
+                                        </rect>
+                                        <circle cx="9" cy="-20" r="1.5" fill="white"/>
+                                        <rect x="7" y="-18" width="4" height="2" fill="white" rx="0.5"/>
+                                        <!-- Analytics chart -->
+                                        <g transform="translate(-25,10)">
+                                            <rect x="0" y="0" width="15" height="10" fill="white" opacity="0.9" rx="1"/>
+                                            <rect x="2" y="7" width="2" height="2" fill="#02CE97">
+                                                <animate attributeName="height" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+                                                <animate attributeName="y" values="7;5;7" dur="2s" repeatCount="indefinite"/>
+                                            </rect>
+                                            <rect x="5" y="5" width="2" height="4" fill="#F9EB10">
+                                                <animate attributeName="height" values="4;6;4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                                                <animate attributeName="y" values="5;3;5" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                                            </rect>
+                                            <rect x="8" y="6" width="2" height="3" fill="#6BF15C">
+                                                <animate attributeName="height" values="3;5;3" dur="2s" begin="1s" repeatCount="indefinite"/>
+                                                <animate attributeName="y" values="6;4;6" dur="2s" begin="1s" repeatCount="indefinite"/>
+                                            </rect>
+                                            <rect x="11" y="4" width="2" height="5" fill="#02CE97">
+                                                <animate attributeName="height" values="5;7;5" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+                                                <animate attributeName="y" values="4;2;4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+                                            </rect>
+                                        </g>
+                                        <!-- Email marketing -->
+                                        <g transform="translate(15,15)">
+                                            <rect x="0" y="0" width="10" height="6" fill="white" opacity="0.9" rx="1">
+                                                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                                            </rect>
+                                            <path d="M1,1 L5,3 L9,1" stroke="#13124C" stroke-width="0.8" fill="none">
+                                                <animate attributeName="stroke-width" values="0.8;1.2;0.8" dur="2s" repeatCount="indefinite"/>
+                                            </path>
+                                            <rect x="2" y="2" width="6" height="0.5" fill="#e5e7eb">
+                                                <animate attributeName="width" values="6;4;6" dur="4s" repeatCount="indefinite"/>
+                                            </rect>
+                                            <rect x="2" y="3" width="4" height="0.5" fill="#e5e7eb">
+                                                <animate attributeName="width" values="4;6;4" dur="4s" begin="2s" repeatCount="indefinite"/>
+                                            </rect>
+                                        </g>
+                                        <!-- Target audience -->
+                                        <circle cx="0" cy="25" r="6" fill="white" opacity="0.8"/>
+                                        <circle cx="0" cy="25" r="4" fill="none" stroke="#F9EB10" stroke-width="1">
+                                            <animate attributeName="r" values="4;5;4" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="0" cy="25" r="2" fill="none" stroke="#02CE97" stroke-width="1">
+                                            <animate attributeName="r" values="2;3;2" dur="3s" begin="1s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="0" cy="25" r="1" fill="#13124C">
+                                            <animate attributeName="r" values="1;1.5;1" dur="3s" begin="2s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <!-- Connection lines -->
+                                        <line x1="-8" y1="-16" x2="-5" y2="-5" stroke="#02CE97" stroke-width="1" opacity="0.4">
+                                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="9" y1="-16" x2="5" y2="-3" stroke="#6BF15C" stroke-width="1" opacity="0.4">
+                                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="-18" y1="15" x2="-10" y2="5" stroke="#F9EB10" stroke-width="1" opacity="0.4">
+                                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1s" repeatCount="indefinite"/>
+                                        </line>
+                                        <line x1="20" y1="18" x2="10" y2="3" stroke="#02CE97" stroke-width="1" opacity="0.4">
+                                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+                                        </line>
+                                        <!-- Floating engagement indicators -->
+                                        <circle cx="15" cy="-10" r="1" fill="#F9EB10" opacity="0.6">
+                                            <animate attributeName="cy" values="-10;-15;-10" dur="3s" repeatCount="indefinite"/>
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="-15" cy="5" r="1" fill="#02CE97" opacity="0.6">
+                                            <animate attributeName="cx" values="-15;-20;-15" dur="4s" repeatCount="indefinite"/>
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+                                        </circle>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 slide-in-left" style="color: #13124C; animation-delay: 1.2s;">Digital Marketing</h3>
+                            <p class="text-gray-600 mb-6 fade-in-up" style="animation-delay: 1.4s;">Strategic digital marketing campaigns that drive engagement, conversions, and sustainable business growth.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.6s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #02CE97;"></span>SEO & Content Strategy</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.7s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #02CE97;"></span>Social Media Marketing</li>
+                                <li class="flex items-center slide-up-stagger" style="animation-delay: 1.8s;"><span class="w-2 h-2 rounded-full mr-3" style="background: #02CE97;"></span>Analytics & Reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: #13124C;">Our Portfolio</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Showcasing successful digital transformations for leading enterprises across various industries.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="hover-lift bg-white rounded-2xl overflow-hidden shadow-lg scale-in" style="animation-delay: 0.1s;" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-8">
+                            <svg viewBox="0 0 200 120" class="w-full h-full">
+                                <!-- Laptop -->
+                                <rect x="40" y="30" width="120" height="70" rx="4" fill="white" opacity="0.9"/>
+                                <rect x="45" y="35" width="110" height="60" fill="#1e293b"/>
+                                <!-- Screen content -->
+                                <rect x="50" y="40" width="100" height="8" fill="#3b82f6" rx="2"/>
+                                <rect x="50" y="52" width="60" height="4" fill="#64748b" rx="1"/>
+                                <rect x="50" y="58" width="80" height="4" fill="#64748b" rx="1"/>
+                                <rect x="50" y="64" width="45" height="4" fill="#64748b" rx="1"/>
+                                <!-- Charts -->
+                                <circle cx="130" cy="60" r="15" fill="none" stroke="#10b981" stroke-width="3" stroke-dasharray="30 10"/>
+                                <rect x="120" y="75" width="6" height="15" fill="#f59e0b"/>
+                                <rect x="128" y="70" width="6" height="20" fill="#ef4444"/>
+                                <rect x="136" y="78" width="6" height="12" fill="#8b5cf6"/>
+                                <!-- Laptop base -->
+                                <rect x="35" y="100" width="130" height="8" rx="4" fill="white" opacity="0.8"/>
+                                <!-- Mobile devices -->
+                                <rect x="20" y="50" width="15" height="25" rx="3" fill="white" opacity="0.7"/>
+                                <rect x="165" y="45" width="15" height="30" rx="3" fill="white" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" style="color: #13124C;">TechGlobal Solutions</h3>
+                            <p class="text-gray-600 mb-4">Complete digital transformation including rebranding, website redesign, and digital marketing strategy.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm rounded-full" style="background: #F9EB10; color: #13124C;">Branding</span>
+                                <span class="px-3 py-1 text-sm rounded-full" style="background: #02CE97; color: white;">Web Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hover-lift bg-white rounded-2xl overflow-hidden shadow-lg scale-in" style="animation-delay: 0.3s;" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center p-8">
+                            <svg viewBox="0 0 200 120" class="w-full h-full">
+                                <!-- Leaf logo design -->
+                                <g transform="translate(100,60)">
+                                    <!-- Main leaf -->
+                                    <path d="M-30,-20 Q-35,-35 -20,-40 Q0,-45 20,-40 Q35,-35 30,-20 Q25,0 0,10 Q-25,0 -30,-20 Z" fill="white" opacity="0.9"/>
+                                    <!-- Leaf vein -->
+                                    <path d="M-20,-25 Q0,-30 20,-25 Q15,-10 0,0 Q-15,-10 -20,-25" fill="#10b981" opacity="0.8"/>
+                                    <!-- Smaller leaves -->
+                                    <path d="M-45,-10 Q-50,-20 -40,-25 Q-30,-28 -25,-20 Q-22,-10 -30,-5 Q-40,-8 -45,-10 Z" fill="white" opacity="0.7"/>
+                                    <path d="M25,-10 Q30,-20 40,-25 Q50,-28 55,-20 Q58,-10 50,-5 Q40,-8 25,-10 Z" fill="white" opacity="0.7"/>
+                                </g>
+                                <!-- Brand elements -->
+                                <rect x="30" y="90" width="40" height="4" fill="white" opacity="0.6" rx="2"/>
+                                <rect x="75" y="90" width="25" height="4" fill="white" opacity="0.6" rx="2"/>
+                                <rect x="105" y="90" width="35" height="4" fill="white" opacity="0.6" rx="2"/>
+                                <!-- Eco symbols -->
+                                <circle cx="50" cy="25" r="8" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+                                <path d="M45,25 L48,28 L55,20" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+                                <circle cx="150" cy="25" r="8" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+                                <path d="M145,25 L148,28 L155,20" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" style="color: #13124C;">EcoVision Industries</h3>
+                            <p class="text-gray-600 mb-4">Sustainable brand identity and comprehensive digital strategy for environmental technology leader.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm rounded-full" style="background: #6BF15C; color: #13124C;">Strategy</span>
+                                <span class="px-3 py-1 text-sm rounded-full" style="background: #F9EB10; color: #13124C;">Identity</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hover-lift bg-white rounded-2xl overflow-hidden shadow-lg scale-in" style="animation-delay: 0.5s;" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center p-8">
+                            <svg viewBox="0 0 200 120" class="w-full h-full">
+                                <!-- Mobile banking interface -->
+                                <rect x="70" y="20" width="60" height="80" rx="8" fill="white" opacity="0.95"/>
+                                <rect x="75" y="25" width="50" height="70" rx="4" fill="#1e293b"/>
+                                <!-- Screen header -->
+                                <rect x="80" y="30" width="40" height="6" fill="#f97316" rx="2"/>
+                                <!-- Balance card -->
+                                <rect x="80" y="40" width="40" height="20" fill="#0f172a" rx="3"/>
+                                <rect x="82" y="42" width="15" height="3" fill="white" opacity="0.7" rx="1"/>
+                                <rect x="82" y="47" width="25" height="4" fill="#10b981" rx="1"/>
+                                <rect x="82" y="53" width="20" height="3" fill="white" opacity="0.5" rx="1"/>
+                                <!-- Transaction list -->
+                                <rect x="80" y="65" width="35" height="3" fill="#64748b" rx="1"/>
+                                <rect x="80" y="70" width="30" height="3" fill="#64748b" rx="1"/>
+                                <rect x="80" y="75" width="38" height="3" fill="#64748b" rx="1"/>
+                                <rect x="80" y="80" width="25" height="3" fill="#64748b" rx="1"/>
+                                <!-- Chart elements -->
+                                <g transform="translate(40,60)">
+                                    <path d="M0,20 Q5,10 10,15 Q15,5 20,12 Q25,8 30,18" stroke="white" stroke-width="2" fill="none" opacity="0.8"/>
+                                    <circle cx="10" cy="15" r="2" fill="white" opacity="0.8"/>
+                                    <circle cx="20" cy="12" r="2" fill="white" opacity="0.8"/>
+                                </g>
+                                <!-- Security icons -->
+                                <g transform="translate(140,40)">
+                                    <rect x="0" y="10" width="12" height="15" rx="2" fill="white" opacity="0.7"/>
+                                    <path d="M3,10 Q3,5 6,5 Q9,5 9,10" stroke="#1e293b" stroke-width="1.5" fill="none"/>
+                                    <circle cx="6" cy="17" r="2" fill="#10b981"/>
+                                </g>
+                                <!-- Dollar signs -->
+                                <text x="25" y="35" fill="white" font-size="12" opacity="0.6">$</text>
+                                <text x="165" y="85" fill="white" font-size="12" opacity="0.6">$</text>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" style="color: #13124C;">FinanceHub Corp</h3>
+                            <p class="text-gray-600 mb-4">Modern financial services platform with enhanced user experience and security features.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm rounded-full" style="background: #02CE97; color: white;">Platform</span>
+                                <span class="px-3 py-1 text-sm rounded-full" style="background: #F9EB10; color: #13124C;">UX Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <button onclick="showSection('contact')" class="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105" style="background: #13124C; color: white;">
+                        Start Your Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: #13124C;">About Pixel Drive Ceylon</h2>
+                        <p class="text-xl text-gray-600 mb-6">
+                            We are a premium digital strategy and rebranding agency dedicated to transforming medium to large enterprises through innovative design and strategic thinking.
+                        </p>
+                        <p class="text-gray-600 mb-8">
+                            Our team combines deep industry expertise with creative excellence to deliver solutions that not only look exceptional but drive measurable business results. We believe in the power of strategic design to transform businesses and create lasting competitive advantages.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center bounce-in" style="animation-delay: 0.2s;">
+                                <div class="text-3xl font-bold mb-2" style="color: #F9EB10;">50+</div>
+                                <div class="text-gray-600">Projects Completed</div>
+                            </div>
+                            <div class="text-center bounce-in" style="animation-delay: 0.4s;">
+                                <div class="text-3xl font-bold mb-2" style="color: #02CE97;">98%</div>
+                                <div class="text-gray-600">Client Satisfaction</div>
+                            </div>
+                            <div class="text-center bounce-in" style="animation-delay: 0.6s;">
+                                <div class="text-3xl font-bold mb-2" style="color: #6BF15C;">5+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                            <div class="text-center bounce-in" style="animation-delay: 0.8s;">
+                                <div class="text-3xl font-bold mb-2" style="color: #13124C;">24/7</div>
+                                <div class="text-gray-600">Support Available</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative" data-aos="fade-left">
+                        <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 h-96 flex items-center justify-center glow-pulse">
+                            <div class="text-center">
+                                <div class="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center rotate-in" style="background: #13124C; animation-delay: 0.3s;">
+                                    <svg class="w-16 h-16" style="color: #F9EB10;" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 slide-in-right" style="color: #13124C; animation-delay: 0.5s;">Excellence Driven</h3>
+                                <p class="text-gray-600 fade-in-up" style="animation-delay: 0.7s;">Committed to delivering exceptional results that exceed expectations and drive business growth.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="floating-animation absolute -top-4 -right-4 w-16 h-16 rounded-full" style="background: #F9EB10; opacity: 0.8;"></div>
+                        <div class="floating-animation absolute -bottom-4 -left-4 w-12 h-12 rounded-full" style="background: #02CE97; opacity: 0.8; animation-delay: -2s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="py-20 gradient-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's Transform Your Business</h2>
+                    <p class="text-xl text-gray-200 max-w-3xl mx-auto">Ready to elevate your brand and drive digital growth? Get in touch with our team of experts.</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div data-aos="fade-right">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center slide-up-stagger" style="animation-delay: 0.2s;">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bounce-in" style="background: #F9EB10; animation-delay: 0.1s;">
+                                        <svg class="w-6 h-6" style="color: #13124C;" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-semibold">Email</div>
+                                        <div class="text-gray-300">hello@pixeldrive.lk</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center slide-up-stagger" style="animation-delay: 0.4s;">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bounce-in" style="background: #02CE97; animation-delay: 0.3s;">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-semibold">Phone</div>
+                                        <div class="text-gray-300">+94 77 123 4567</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center slide-up-stagger" style="animation-delay: 0.6s;">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bounce-in" style="background: #6BF15C; animation-delay: 0.5s;">
+                                        <svg class="w-6 h-6" style="color: #13124C;" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-semibold">Location</div>
+                                        <div class="text-gray-300">Colombo, Sri Lanka</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <form id="contactForm" class="bg-white rounded-3xl p-8 shadow-2xl scale-in" style="animation-delay: 0.3s;">
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="slide-up-stagger" style="animation-delay: 0.5s;">
+                                    <label class="block text-sm font-semibold mb-2" style="color: #13124C;">First Name</label>
+                                    <input type="text" id="firstName" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 transition-all" style="focus:ring-color: #F9EB10;">
+                                </div>
+                                <div class="slide-up-stagger" style="animation-delay: 0.6s;">
+                                    <label class="block text-sm font-semibold mb-2" style="color: #13124C;">Last Name</label>
+                                    <input type="text" id="lastName" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 transition-all" style="focus:ring-color: #F9EB10;">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6 slide-up-stagger" style="animation-delay: 0.7s;">
+                                <label class="block text-sm font-semibold mb-2" style="color: #13124C;">Email Address</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 transition-all" style="focus:ring-color: #F9EB10;">
+                            </div>
+                            
+                            <div class="mb-6 slide-up-stagger" style="animation-delay: 0.8s;">
+                                <label class="block text-sm font-semibold mb-2" style="color: #13124C;">Company</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 transition-all" style="focus:ring-color: #F9EB10;">
+                            </div>
+                            
+                            <div class="mb-6 slide-up-stagger" style="animation-delay: 0.9s;">
+                                <label class="block text-sm font-semibold mb-2" style="color: #13124C;">Project Type</label>
+                                <select id="projectType" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 transition-all" style="focus:ring-color: #F9EB10;">
+                                    <option value="">Select a service</option>
+                                    <option value="branding">Brand Strategy & Identity</option>
+                                    <option value="digital">Digital Strategy</option>
+                                    <option value="web">Web Development</option>
+                                    <option value="marketing">Digital Marketing</option>
+                                    <option value="full">Complete Transformation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6 slide-up-stagger" style="animation-delay: 1s;">
+                                <label class="block text-sm font-semibold mb-2" style="color: #13124C;">Message</label>
+                                <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 transition-all resize-none" style="focus:ring-color: #F9EB10;" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 bounce-in" style="background: #F9EB10; color: #13124C; animation-delay: 1.1s;">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="mr-3">
+                            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="20" fill="#13124C"/>
+                                <text x="20" y="28" text-anchor="middle" fill="#F9EB10" font-family="Poppins, sans-serif" font-size="18" font-weight="700">PD</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold">Pixel Drive Ceylon</div>
+                            <div class="text-xs text-gray-400 -mt-1">Premium Digital Strategy</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">Transforming businesses through premium digital strategy and innovative rebranding solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-colors" style="background: #F9EB10; color: #13124C;">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-colors" style="background: #02CE97;">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-colors" style="background: #6BF15C; color: #13124C;">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Brand Strategy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Strategy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" onclick="showSection('about')" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" onclick="showSection('portfolio')" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#" onclick="showSection('contact')" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Pixel Drive Ceylon. All rights reserved. | Transforming businesses through premium digital solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navigation functionality
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Find and activate the correct nav link
+            const activeLink = document.querySelector(`[onclick="showSection('${sectionName}')"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Refresh AOS animations
+            setTimeout(() => {
+                AOS.refresh();
+            }, 100);
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('open');
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                projectType: document.getElementById('projectType').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Simulate form submission
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                submitButton.textContent = 'Message Sent!';
+                submitButton.style.background = '#02CE97';
+                
+                // Reset form
+                setTimeout(() => {
+                    this.reset();
+                    submitButton.textContent = originalText;
+                    submitButton.style.background = '#F9EB10';
+                    submitButton.disabled = false;
+                    
+                    // Show success message
+                    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                }, 2000);
+            }, 1500);
+        });
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling behavior
+            document.documentElement.style.scrollBehavior = 'smooth';
+            
+            // Initialize with home section
+            showSection('home');
+        });
+
+        // Add scroll effects
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'989867eb50faf8d6',t:'MTc1OTYxOTk4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
